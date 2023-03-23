@@ -17,14 +17,14 @@ public class PlayerScript2D : MonoBehaviour
     void Update()
     {
         //doesn't work for now
-        if (!isFacingRight && horizontal > 0f)
-        {
-            Flip();
-        }
-        else if (isFacingRight && horizontal < 0f)
-        {
-            Flip();
-        }
+        // if (!isFacingRight && horizontal > 0f)
+        // {
+        //     Flip();
+        // }
+        // else if (isFacingRight && horizontal < 0f)
+        // {
+        //     Flip();
+        // }
     }
 
     public void FixedUpdate()
