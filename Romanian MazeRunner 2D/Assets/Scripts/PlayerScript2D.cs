@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,11 +7,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript2D : MonoBehaviour
 {
+    //TODO move to SerializedField
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
     public Weapon weapon;
     public TrailRenderer tr;
+    public GameObject fallDetect;
 
     //dash
     private bool canDash = true;
@@ -18,40 +21,43 @@ public class PlayerScript2D : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
-    
+
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Vector2 mousePosition;
     private Vector3 respawnPoint;
-    public GameObject fallDetect;
 
     private Animator playerAnimator;
 
-   
+
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
     }
+
     void Update()
     {
         if (!isFacingRight && horizontal > 0f)
-         {
+        {
             Flip();
-         }
-         else if (isFacingRight && horizontal < 0f)
+        }
+        else if (isFacingRight && horizontal < 0f)
         {
             Flip();
         }
 
-        if (Input.GetMouseButtonDown(0)){
-             weapon.Fire();
+        if (Input.GetMouseButtonDown(0))
+        {
+            weapon.Fire();
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         playerAnimator.SetBool("OnGround", IsGrounded());
+
+        Debug.Log(isDashing);
     }
 
     public void FixedUpdate()
@@ -61,6 +67,7 @@ public class PlayerScript2D : MonoBehaviour
         {
             return;
         }
+
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         // Vector2 aimDirection = mousePosition - rb.position; 
         // float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f; 
@@ -69,34 +76,30 @@ public class PlayerScript2D : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-
-        if (!isDashing)
+        if (isDashing) return;
+        if (context.performed && IsGrounded())
         {
-            if (context.performed && IsGrounded())
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            }
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
 
-            if (context.canceled && rb.velocity.y > 0f)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            }
+        if (context.canceled && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
     }
 
     public void DashAction(InputAction.CallbackContext context)
     {
+        if (!canDash) return;
         StartCoroutine(Dash());
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (!isDashing)
-        {
-            horizontal = context.ReadValue<Vector2>().x;
-        }
+        if (isDashing) return;
+        horizontal = context.ReadValue<Vector2>().x;
     }
-    
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -120,5 +123,6 @@ public class PlayerScript2D : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        tr.emitting = false;
     }
 }
