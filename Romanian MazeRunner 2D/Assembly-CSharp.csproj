@@ -60,13 +60,13 @@
     <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
     <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovement.cs" />
     <Compile Include="Assets\Ethan the Hero\Script\PlayerAttackMethod.cs" />
-    <Compile Include="Assets\CameraController.cs" />
-    <Compile Include="Assets\PlayerScript2D.cs" />
-    <Compile Include="Assets\Weapon.cs" />
-    <Compile Include="Assets\Bullet.cs" />
-    <Compile Include="Assets\EnemyScript.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
-    <Compile Include="Assets\EnemyDamage.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript2D.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game Buffs\Free Realistic Textures\README.txt" />
