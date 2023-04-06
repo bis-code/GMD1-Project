@@ -18,6 +18,7 @@
 >   15. As an user, I want to be able to hit the enemy and kill them.
 >   16. As an user, I want to be able to move/jump/crouch throughout obstacles.
 >   17. As an user, I want to be able to register/login with an account before playing the game.
+>   18. As an user, I want to be able to have enemies with whom I can fight.
 
 
 ### Reflections - notes
