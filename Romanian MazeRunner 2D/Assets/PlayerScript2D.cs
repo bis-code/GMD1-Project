@@ -10,6 +10,13 @@ public class PlayerScript2D : MonoBehaviour
     public LayerMask groundLayer;
     // public Weapon weapon;
 
+    //dash
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+    
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
