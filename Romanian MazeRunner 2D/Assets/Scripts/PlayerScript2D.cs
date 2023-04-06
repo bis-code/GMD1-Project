@@ -13,7 +13,6 @@ public class PlayerScript2D : MonoBehaviour
     public LayerMask groundLayer;
     public Weapon weapon;
     public TrailRenderer tr;
-    public GameObject fallDetect;
 
     //dash
     private bool canDash = true;
@@ -27,7 +26,6 @@ public class PlayerScript2D : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Vector2 mousePosition;
-    private Vector3 respawnPoint;
 
     private Animator playerAnimator;
 
