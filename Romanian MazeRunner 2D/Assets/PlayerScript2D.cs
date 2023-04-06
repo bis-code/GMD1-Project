@@ -8,11 +8,13 @@ public class PlayerScript2D : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public Weapon weapon;
 
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private Vector2 mousePosition;
 
     void Update()
     {
@@ -24,12 +26,20 @@ public class PlayerScript2D : MonoBehaviour
          {
              Flip();
          }
+        if (Input.GetMouseButtonDown(0))
+        {
+            weapon.Fire();
+        }
+
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     public void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
+        Vector2 aimDirection = mousePosition - rb.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = aimAngle;
     }
 
     public void Jump(InputAction.CallbackContext context)
