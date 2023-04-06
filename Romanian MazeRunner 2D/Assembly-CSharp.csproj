@@ -42,44 +42,75 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\PlayerScript2D.cs" />
+     <Compile Include="Assets\EnemyScript.cs" />
+     <Compile Include="Assets\Bullet.cs" />
+     <Compile Include="Assets\Weapon.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Environment\Animations" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Dry_Ground_10" />
+     <Folder Include="Assets\Environment\Sprites\Spirits" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Beach_Rocks_9" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rocky_Sand_1" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rocky_Grass_17" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rocky_Ground_15" />
+     <Folder Include="Assets\Environment\Sprites\Vegetation" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\MapObjects" />
+     <Folder Include="Assets\Environment\Sprites\Sky" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Medieval_Stone_Wall_16" />
+     <Folder Include="Assets\Environment\Sprites\Crypt" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Cracked_Soil_16" />
+     <Folder Include="Assets\Environment\Sprites" />
      <Folder Include="Assets\ImagesForBackground" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Ice_15" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Flaked_Paint_Wall_7" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Asphalt_26" />
+     <Folder Include="Assets\Environment\Sprites\Clouds\Clouds Packed" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Snowy_Rock_21" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Mixed_Snow_1" />
+     <Folder Include="Assets\Environment\Materials\Vegetation" />
+     <Folder Include="Assets\Environment\Sprite Shapes\Sprite Shape Profiles" />
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Forest_Ground_12" />
      <Folder Include="Assets\Animations" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures" />
+     <Folder Include="Assets\Environment\Sprites\Glyphs" />
+     <Folder Include="Assets\Environment\Prefabs" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Concrete_3" />
+     <Folder Include="Assets\Environment\Materials\Water" />
      <None Include="Assets\Game Buffs\Free Realistic Textures\README.txt" />
+     <Folder Include="Assets\Environment\Materials\Temple" />
+     <Folder Include="Assets\Environment\Tilemaps" />
+     <Folder Include="Assets\Environment\Textures" />
+     <Folder Include="Assets\Environment" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Demo" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rough_Rock_1" />
+     <Folder Include="Assets\Environment\Materials\Spirit" />
+     <Folder Include="Assets\Environment\Sprites\Clouds" />
+     <Folder Include="Assets\Environment\Materials" />
+     <Folder Include="Assets\Environment\Sprites\Altar" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Demolished_Tiles_2" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Shingle_Roof_12" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Demo\Demo" />
      <Folder Include="Assets\Game Buffs" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Beach_Sand_1" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Dirty_Brick_Wall_6" />
+     <Folder Include="Assets\Environment\Sprites\Water" />
+     <Folder Include="Assets\Environment\Sprites\Lights" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Polished_Marble_34" />
+     <Folder Include="Assets\Environment\Sprites\Altar\Altar Packed" />
+     <Folder Include="Assets\Environment\Sprites\Vegetation\Vegetation Packed" />
+     <Folder Include="Assets\Environment\Sprites\Rocks" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Wood_Planks_40" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rusty_Metal_11" />
+     <Folder Include="Assets\Environment\Sprite Shapes\Sprites" />
+     <Folder Include="Assets\Environment\Sprite Shapes" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Snowy_Concrete_Pavement_3" />
+     <Folder Include="Assets\Environment\Materials\Sky" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -782,6 +813,9 @@
      <Reference Include="UnityEditor.UI">
      <HintPath>D:\SEM6\GMD\GMD\GMD1-Project\Romanian MazeRunner 2D\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.InputSystem">
+     <HintPath>D:\SEM6\GMD\GMD\GMD1-Project\Romanian MazeRunner 2D\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>D:\SEM6\GMD\GMD\GMD1-Project\Romanian MazeRunner 2D\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
@@ -862,9 +896,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>D:\SEM6\GMD\GMD\GMD1-Project\Romanian MazeRunner 2D\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InputSystem">
-     <HintPath>D:\SEM6\GMD\GMD\GMD1-Project\Romanian MazeRunner 2D\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
