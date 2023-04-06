@@ -41,10 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovementData.cs" />
-     <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
-     <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovement.cs" />
-     <Compile Include="Assets\Ethan the Hero\Script\PlayerAttackMethod.cs" />
      <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\PlayerScript2D.cs" />
      <Compile Include="Assets\Weapon.cs" />
@@ -59,8 +55,6 @@
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.zh-Hant.txt" />
-     <Folder Include="Assets\Ethan the Hero\Animation" />
-     <Folder Include="Assets\Ethan the Hero\Script\PlayerMovement" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.31" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.1" />
@@ -100,7 +94,6 @@
      <Folder Include="Assets\Game Buffs\Free Realistic Textures" />
      <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\Tests" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rocky_Ground_15" />
-     <Folder Include="Assets\Ethan the Hero\Script" />
      <None Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9" />
@@ -168,7 +161,6 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.en.txt" />
-     <Folder Include="Assets\Ethan the Hero\Animation\EthanAnim" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.ja.txt" />
@@ -200,7 +192,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
-     <Folder Include="Assets\Animations" />
+     <Folder Include="Assets\Character\Animations" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.18\package.json" />
@@ -269,7 +261,6 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
-     <Folder Include="Assets\Ethan the Hero\Graphic" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Demo" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Textures" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
@@ -365,7 +356,6 @@
      <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.17" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
-     <Folder Include="Assets\Ethan the Hero\Graphic\Urp" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rusty_Metal_11" />
@@ -397,6 +387,7 @@
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.2d.psdimporter@6.0.7\package.json" />
+     <Folder Include="Assets\Character" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Snowy_Concrete_Pavement_3" />
      <Folder Include="Assets\Environment\Materials\Sky" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\ValidationConfig.json" />
