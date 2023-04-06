@@ -24,7 +24,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        target = GameObject.Find("Player 1").transform;
+        target = GameObject.Find("Player").transform;
     }
 
     void Update()
