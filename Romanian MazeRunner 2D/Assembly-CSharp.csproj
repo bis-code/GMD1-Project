@@ -44,6 +44,8 @@
      <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\PlayerScript2D.cs" />
      <Compile Include="Assets\Weapon.cs" />
+     <Compile Include="Assets\PlayerHealth.cs" />
+     <Compile Include="Assets\EnemyDamage.cs" />
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\EnemyScript.cs" />
      <Folder Include="Assets" />

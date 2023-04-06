@@ -14,6 +14,10 @@ public class PlayerScript2D : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private Vector2 mousePosition;
+    private Vector3 respawnPoint;
+    public GameObject fallDetect;
+    
     // private Vector2 mousePosition;
 
     private Animator playerAnimator;
