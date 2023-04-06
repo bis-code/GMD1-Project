@@ -15,7 +15,9 @@ public class PlayerScript2D : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Vector2 mousePosition;
-
+    private Vector3 respawnPoint;
+    public GameObject fallDetect;
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

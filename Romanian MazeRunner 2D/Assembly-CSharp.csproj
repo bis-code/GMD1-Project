@@ -45,6 +45,8 @@
      <Compile Include="Assets\EnemyScript.cs" />
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\Weapon.cs" />
+     <Compile Include="Assets\PlayerHealth.cs" />
+     <Compile Include="Assets\EnemyDamage.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Environment\Animations" />
