@@ -8,7 +8,7 @@ public class PlayerScript2D : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public Weapon weapon;
+    // public Weapon weapon;
 
     private float horizontal;
     private float speed = 8f;
@@ -18,27 +18,47 @@ public class PlayerScript2D : MonoBehaviour
     private Vector3 respawnPoint;
     public GameObject fallDetect;
     
+    // private Vector2 mousePosition;
+
+    private Animator playerAnimator;
+
+   
+    void Start()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!isFacingRight && horizontal > 0f)
+         {
+            Flip();
+         }
+         else if (isFacingRight && horizontal < 0f)
         {
-            weapon.Fire();
+            Flip();
         }
 
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     weapon.Fire();
+        // }
+
+        // mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        playerAnimator.SetBool("OnGround", IsGrounded());
     }
 
     public void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        Vector2 aimDirection = mousePosition - rb.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = aimAngle;
+        // Vector2 aimDirection = mousePosition - rb.position;
+        // float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        // rb.rotation = aimAngle;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-
+        
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
