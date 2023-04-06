@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +10,15 @@ public class PlayerScript2D : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public Weapon weapon;
+    public TrailRenderer tr;
 
+    //dash
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+    
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -47,26 +56,47 @@ public class PlayerScript2D : MonoBehaviour
 
     public void FixedUpdate()
     {
+        //player don't jump or do anything else if dashing
+        if (isDashing)
+        {
+            return;
+        }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        Vector2 aimDirection = mousePosition - rb.position; 
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f; 
-        rb.rotation = aimAngle;
+        // Vector2 aimDirection = mousePosition - rb.position; 
+        // float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f; 
+        // rb.rotation = aimAngle;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        
-        if (context.performed && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
 
-        if (context.canceled && rb.velocity.y > 0f)
+        if (!isDashing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            if (context.performed && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            }
+
+            if (context.canceled && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
         }
     }
 
+    public void DashAction(InputAction.CallbackContext context)
+    {
+        StartCoroutine(Dash());
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        if (!isDashing)
+        {
+            horizontal = context.ReadValue<Vector2>().x;
+        }
+    }
+    
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -80,8 +110,18 @@ public class PlayerScript2D : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    public void Move(InputAction.CallbackContext context)
+    private IEnumerator Dash()
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }
