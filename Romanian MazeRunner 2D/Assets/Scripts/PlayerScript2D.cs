@@ -16,7 +16,7 @@ public class PlayerScript2D : MonoBehaviour
     public GameObject attackArea;
 
     //dead
-    private bool isDead;
+   
     
     //attack
     private bool isAttacking = false;
@@ -70,7 +70,6 @@ public class PlayerScript2D : MonoBehaviour
         playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         playerAnimator.SetBool("OnGround", IsGrounded());
         playerAnimator.SetBool("IsAttacking", isAttacking);
-        playerAnimator.SetBool("IsDead", isDead);
     }
 
     public void FixedUpdate()
@@ -103,6 +102,15 @@ public class PlayerScript2D : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            playerAnimator.SetTrigger("Hurt");
+        }
+            
     }
 
     public void Dash(InputAction.CallbackContext context)
@@ -163,6 +171,6 @@ public class PlayerScript2D : MonoBehaviour
 
     public void isPlayerDead(bool deadState)
     {
-        isDead = deadState;
+        
     }
 }

@@ -7,10 +7,10 @@ public class EnemyDamage : MonoBehaviour
 {
     public PlayerHealth pHealth;
     public float damage;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerHealth>().health -= damage;
+            pHealth.Hurt();
         }
     }
 }

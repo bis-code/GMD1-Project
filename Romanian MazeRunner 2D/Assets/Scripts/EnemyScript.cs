@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-        if (target)
+        if (target != null)
         {
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
