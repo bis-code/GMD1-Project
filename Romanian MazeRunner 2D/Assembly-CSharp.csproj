@@ -61,17 +61,20 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
     <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemyFollow.cs" />
     <Compile Include="Assets\Ethan the Hero\Script\PlayerAttackMethod.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\EnemyDamage.cs" />
+    <Compile Include="Assets\Scripts\AttackArea.cs" />
     <Compile Include="Assets\Scripts\PlayerScript2D.cs" />
     <Compile Include="Assets\Scripts\PlayerFallRespawn.cs" />
-    <Compile Include="Assets\AttackArea.cs" />
+    <Compile Include="Assets\Scripts\RandomSpawnerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game Buffs\Free Realistic Textures\README.txt" />
+    <None Include="Assets\Aekashics Librarium - Megapack III\Terms of use.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

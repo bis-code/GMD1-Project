@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBar;
 
     private Rigidbody2D rb;
-    private bool isDead = false;
     private Animator animator;
 
     private void Start()
@@ -28,15 +27,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            isDead = true;
             Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
             Die();
         }
     }
@@ -47,12 +38,18 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log(this.health);
     }
 
+    public void Hurt()
+    {
+        
+    }
+
     //todo make it on enemy with health
     public void Die()
     {
         animator.SetTrigger("Dead");
         rb.bodyType = RigidbodyType2D.Static;
     }
+
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

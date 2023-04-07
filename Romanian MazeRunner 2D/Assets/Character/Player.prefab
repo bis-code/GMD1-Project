@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 248554028953546203}
   - component: {fileID: 248554028953546202}
   - component: {fileID: 1784439497706921709}
-  - component: {fileID: 248554028953546192}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -184,7 +183,19 @@ MonoBehaviour:
     m_ActionId: 986e39f9-fc55-49f9-affa-ebf271acf7e6
     m_ActionName: Player/Look[/Mouse/delta,/Touchscreen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 248554028953546197}
+        m_TargetAssemblyTypeName: PlayerScript2D, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5f5e26d3-1840-47e9-afeb-e2c244aa627a
     m_ActionName: Player/Fire[/Mouse/leftButton,/Touchscreen/primaryTouch/tap]
   - m_PersistentCalls:
@@ -247,7 +258,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 248554028953546197}
         m_TargetAssemblyTypeName: PlayerScript2D, Assembly-CSharp
-        m_MethodName: DashAction
+        m_MethodName: Dash
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -406,8 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 0
-  healthBar: {fileID: 0}
+  maxHealth: 100
+  healthBar: {fileID: 62843021154749613, guid: 6fd380aabeba2804bb474c8a2e22b7c7, type: 3}
 --- !u!114 &248554028953546202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,22 +433,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallDetect: {fileID: 7542643619173063446, guid: c4fa909a6d2be3e4f88257e3cceca1b0, type: 3}
 --- !u!70 &1784439497706921709
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248554028953546205}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01491764, y: -0.087502375}
-  m_Size: {x: 0.4311839, y: 0.9265248}
-  m_Direction: 0
---- !u!70 &248554028953546192
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -541,6 +536,6 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.62, y: 0.07}
+    - - {x: 0.5056506, y: -0.023514112}
       - {x: -0.11, y: 0.44}
-      - {x: -0.11, y: -0.61}
+      - {x: -0.098145224, y: -0.480519}
