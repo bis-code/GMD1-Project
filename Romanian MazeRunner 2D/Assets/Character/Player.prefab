@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 248554028953546203}
   - component: {fileID: 248554028953546202}
   - component: {fileID: 1784439497706921709}
-  - component: {fileID: 248554028953546192}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -422,22 +421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallDetect: {fileID: 7542643619173063446, guid: c4fa909a6d2be3e4f88257e3cceca1b0, type: 3}
 --- !u!70 &1784439497706921709
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248554028953546205}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01491764, y: -0.087502375}
-  m_Size: {x: 0.4311839, y: 0.9265248}
-  m_Direction: 0
---- !u!70 &248554028953546192
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
