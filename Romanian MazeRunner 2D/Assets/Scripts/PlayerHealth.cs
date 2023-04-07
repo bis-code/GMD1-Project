@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public Image healthBar;
 
+    private Rigidbody2D rb;
     private bool isDead = false;
-    public PlayerScript2D player;
+    private Animator animator;
 
     private void Start()
     {
         maxHealth = health;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -27,12 +31,30 @@ public class PlayerHealth : MonoBehaviour
             isDead = true;
             Destroy(gameObject);
         }
-        player.isPlayerDead(isDead);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Die();
+        }
     }
 
     public void Damage(int health)
     {
         this.health -= health;
         Debug.Log(this.health);
+    }
+
+    //todo make it on enemy with health
+    public void Die()
+    {
+        animator.SetTrigger("Dead");
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
