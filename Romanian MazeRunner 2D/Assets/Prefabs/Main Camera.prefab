@@ -131,6 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a8517c98be3ea4e8e463e278f45336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7430884343568047905, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}
-  offset: 0
-  offsetSmoothing: 0
+  FollowSpeed: 2
+  yOffset: 1
+  target: {fileID: 248554028953546195, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}
