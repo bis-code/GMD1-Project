@@ -11,8 +11,17 @@ public class PlayerScript2D : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public Weapon weapon;
     public TrailRenderer tr;
+    public GameObject fallDetect;
+    public GameObject attackArea;
+
+    //dead
+    private bool isDead;
+    
+    //attack
+    private bool isAttacking = false;
+    private float timeToAttack = 0.25f;
+    private float timer = 0f;
 
     //dash
     private bool canDash = true;
@@ -26,6 +35,7 @@ public class PlayerScript2D : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Vector2 mousePosition;
+    private Vector3 respawnPoint;
 
     private Animator playerAnimator;
 
@@ -46,16 +56,21 @@ public class PlayerScript2D : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if(isAttacking)
         {
-            weapon.Fire();
+            timer += Time.deltaTime;
+            
+            if(timer >= timeToAttack)
+            {
+                ResetAttacking();
+            }
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         playerAnimator.SetBool("OnGround", IsGrounded());
-
-        Debug.Log(isDashing);
+        playerAnimator.SetBool("IsAttacking", isAttacking);
+        playerAnimator.SetBool("IsDead", isDead);
     }
 
     public void FixedUpdate()
@@ -75,6 +90,7 @@ public class PlayerScript2D : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (isDashing) return;
+
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
@@ -86,10 +102,15 @@ public class PlayerScript2D : MonoBehaviour
         }
     }
 
-    public void DashAction(InputAction.CallbackContext context)
+    public void Dash(InputAction.CallbackContext context)
     {
         if (!canDash) return;
         StartCoroutine(Dash());
+    }
+
+    public void Attack(InputAction.CallbackContext context)
+    {
+        Attack();
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -122,5 +143,23 @@ public class PlayerScript2D : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
         tr.emitting = false;
+    }
+
+    private void Attack()
+    {
+        isAttacking = true;
+        attackArea.SetActive(isAttacking);
+    }
+
+    private void ResetAttacking()
+    {
+        timer = 0;
+        isAttacking = false;
+        attackArea.SetActive(isAttacking);
+    }
+
+    public void isPlayerDead(bool deadState)
+    {
+        isDead = deadState;
     }
 }

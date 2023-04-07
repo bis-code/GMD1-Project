@@ -10,6 +10,9 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public Image healthBar;
 
+    private bool isDead = false;
+    public PlayerScript2D player;
+
     private void Start()
     {
         maxHealth = health;
@@ -21,7 +24,15 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            isDead = true;
             Destroy(gameObject);
         }
+        player.isPlayerDead(isDead);
+    }
+
+    public void Damage(int health)
+    {
+        this.health -= health;
+        Debug.Log(this.health);
     }
 }
