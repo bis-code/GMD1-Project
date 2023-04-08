@@ -46,10 +46,6 @@ public class PlayerHealth : MonoBehaviour
         isHurt = true;
     }
 
-    public void ResetHurtTrigger()
-    {
-        animator.ResetTrigger("Hurt");
-    }
     //todo make it on enemy with health
     public void Die()
     {
