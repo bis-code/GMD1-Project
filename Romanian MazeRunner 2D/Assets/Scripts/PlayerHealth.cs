@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private bool isHurt = false;
 
     private void Start()
     {
@@ -27,9 +28,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
             Die();
         }
+
+        animator.SetBool("IsHurt", isHurt);
+        isHurt = false;
     }
 
     public void Damage(int health)
@@ -40,9 +43,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void Hurt()
     {
-        
+        isHurt = true;
     }
 
+    public void ResetHurtTrigger()
+    {
+        animator.ResetTrigger("Hurt");
+    }
     //todo make it on enemy with health
     public void Die()
     {

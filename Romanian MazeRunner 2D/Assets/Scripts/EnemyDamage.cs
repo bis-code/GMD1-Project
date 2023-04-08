@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public PlayerHealth pHealth;
     public float damage;
+    private PlayerHealth pHealth;
 
     // Start is called before the first frame update
     void Start()
     {
+        pHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().health -= damage;
+            pHealth.health -= damage;
             pHealth.Hurt();
         }
     }
