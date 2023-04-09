@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerFallRespawn.cs" />
      <Compile Include="Assets\Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\Scripts\RandomSpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\SceneChangerScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
      <Folder Include="Assets\Scenes" />
