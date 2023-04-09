@@ -8,6 +8,7 @@ TagManager:
   - FallDetect
   - Wall
   - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
