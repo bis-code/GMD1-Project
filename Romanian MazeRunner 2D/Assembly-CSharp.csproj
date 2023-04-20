@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\PlayerScript2D.cs" />
      <Compile Include="Assets\Scripts\PlayerFallScript.cs" />
      <Compile Include="Assets\Scripts\RandomSpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\HealthBarScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
      <Folder Include="Assets\Scenes" />
