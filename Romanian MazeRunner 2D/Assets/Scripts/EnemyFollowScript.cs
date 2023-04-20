@@ -18,7 +18,5 @@ public class EnemyFollowScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
-        
     }
 }
