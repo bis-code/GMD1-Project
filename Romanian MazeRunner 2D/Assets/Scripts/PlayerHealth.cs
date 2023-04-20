@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health;
-    public float maxHealth;
-    public Image healthBar;
+    public static float health;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -17,15 +15,13 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        maxHealth = health;
+        health = 1;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
-
         if (health <= 0)
         {
             Die();
@@ -35,10 +31,10 @@ public class PlayerHealth : MonoBehaviour
         isHurt = false;
     }
 
-    public void Damage(int health)
+    public void Damage(float health)
     {
-        this.health -= health;
-        Debug.Log(this.health);
+        PlayerHealth.health -= health;
+        Debug.Log(PlayerHealth.health);
     }
 
     public void Hurt()

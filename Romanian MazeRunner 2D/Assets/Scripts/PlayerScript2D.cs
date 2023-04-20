@@ -84,9 +84,6 @@ public class PlayerScript2D : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
-        // Vector2 aimDirection = mousePosition - rb.position; 
-        // float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f; 
-        // rb.rotation = aimAngle;
     }
 
     public void Jump(InputAction.CallbackContext context)
