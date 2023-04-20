@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool isHurt = false;
+    private IHealthUtility _healthUtility;
 
     private void Start()
     {
@@ -24,29 +26,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            Die();
+            _healthUtility.Die();
         }
 
         animator.SetBool("IsHurt", isHurt);
         isHurt = false;
-    }
-
-    public void Damage(float health)
-    {
-        PlayerHealth.health -= health;
-        Debug.Log(PlayerHealth.health);
-    }
-
-    public void Hurt()
-    {
-        isHurt = true;
-    }
-
-    //todo make it on enemy with health
-    public void Die()
-    {
-        animator.SetTrigger("Dead");
-        rb.bodyType = RigidbodyType2D.Static;
     }
 
     public void RestartLevel()

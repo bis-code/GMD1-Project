@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
     public float damage;
+    
     private PlayerHealth pHealth;
+    private IHealthUtility _healthUtility;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PlayerHealth.health -= damage;
-            pHealth.Hurt();
+            _healthUtility.Hurt();
         }
     }
 }

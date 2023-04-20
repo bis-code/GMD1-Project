@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovementData.cs" />
+     <Compile Include="Assets\Scripts\HealthUtility.cs" />
+     <Compile Include="Assets\Scripts\IHealthUtility.cs" />
      <Compile Include="Assets\Scripts\SceneChangerScript.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
@@ -145,7 +147,6 @@
      <Folder Include="Assets\Environment\Materials" />
      <Folder Include="Assets\Environment\Sprites\Altar" />
      <None Include="Assets\Aekashics Librarium - Megapack III\Terms of use.txt" />
-     <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Enemies\Bucuresti\Enemies" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Demolished_Tiles_2" />
      <Folder Include="Assets\Ethan the Hero\PhisicMaterial" />
