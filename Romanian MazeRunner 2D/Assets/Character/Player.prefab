@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 2791714774450573155}
   - component: {fileID: 709727387971876394}
   - component: {fileID: 6398038910869587728}
-  - component: {fileID: 9165730112372425619}
   - component: {fileID: 1476379690995833049}
+  - component: {fileID: 2409016984202228217}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -419,19 +419,6 @@ MonoBehaviour:
   health: 100
   maxHealth: 0
   healthBar: {fileID: 0}
---- !u!114 &9165730112372425619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999604480493566564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c60caefebda9ce429e706d4b6554034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallDetect: {fileID: 7542643619173063446, guid: c4fa909a6d2be3e4f88257e3cceca1b0, type: 3}
 --- !u!70 &1476379690995833049
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -448,6 +435,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.014917571, y: -0.08644182}
   m_Size: {x: 0.30999166, y: 0.9244038}
   m_Direction: 0
+--- !u!114 &2409016984202228217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999604480493566564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c60caefebda9ce429e706d4b6554034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDetect: {fileID: 7542643619173063446, guid: c4fa909a6d2be3e4f88257e3cceca1b0, type: 3}
 --- !u!1 &3511862777615342333
 GameObject:
   m_ObjectHideFlags: 0

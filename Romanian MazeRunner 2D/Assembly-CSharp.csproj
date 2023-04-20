@@ -42,22 +42,19 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovementData.cs" />
-     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\SceneChangerScript.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyFollowScript.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerAttackMethod.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
-     <Compile Include="Assets\Scripts\DissapearingBlockScript.cs" />
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
-     <Compile Include="Assets\Scripts\AttackArea.cs" />
+     <Compile Include="Assets\Scripts\AttackScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript2D.cs" />
-     <Compile Include="Assets\Scripts\PlayerFallRespawn.cs" />
-     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+     <Compile Include="Assets\Scripts\PlayerFallScript.cs" />
      <Compile Include="Assets\Scripts\RandomSpawnerScript.cs" />
-     <Compile Include="Assets\Scripts\SceneChangerScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
      <Folder Include="Assets\Scenes" />

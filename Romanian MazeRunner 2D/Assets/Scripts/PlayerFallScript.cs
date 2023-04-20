@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFallRespawn : MonoBehaviour
+public class PlayerFallScript : MonoBehaviour
 {
     private Vector3 respawnPoint;
 
