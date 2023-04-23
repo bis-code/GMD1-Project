@@ -111,7 +111,7 @@ namespace DefaultNamespace
             attackArea.SetActive(IsAttacking);
         }
 
-        public void PerformAnimations(Animator playerAnimator, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, PlayerHealth playerHealth)
+        public void PerformAnimations(Animator playerAnimator, AudioSource audioSource, AudioClip audioClip, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, PlayerHealth playerHealth)
         {
             playerAnimator.SetFloat(Animations.Speed.ToString(), Mathf.Abs(rb.velocity.x));
             playerAnimator.SetBool(Animations.OnGround.ToString(), 
@@ -121,6 +121,7 @@ namespace DefaultNamespace
             playerAnimator.SetBool(Animations.IsHurt.ToString(), playerHealth.isHurt);
             if (playerHealth.isDead)
             {
+                audioSource.clip = audioClip;
                 playerAnimator.SetTrigger(Animations.Dead.ToString());
             }
         }
@@ -133,6 +134,11 @@ namespace DefaultNamespace
                 _instance = new PlayerMovementsUtility();
             }
             return _instance;
+        }
+
+        public void playAudioClip(Animator animator)
+        {
+            
         }
     }
 }
