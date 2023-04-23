@@ -46,7 +46,6 @@
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovementData.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraUtility.cs" />
      <Compile Include="Assets\Scripts\Scene\SceneChangerScript.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\Utility\model\EnemyDirection.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />

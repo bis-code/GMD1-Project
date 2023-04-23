@@ -20,7 +20,13 @@ public class PlayerScript2D : MonoBehaviour
     [SerializeField]
     private GameObject fallDetect;
     [SerializeField]
-    private GameObject attackArea;
+    private float attackRange = 1.6f;
+    [SerializeField]
+    private Transform attackPoint;
+    [SerializeField] 
+    private LayerMask enemyLayers;
+    [SerializeField] 
+    private float playerDamage = 0.1f;
     [SerializeField]
     private float timeToAttack = 0.25f;
     [SerializeField]
@@ -34,27 +40,30 @@ public class PlayerScript2D : MonoBehaviour
     [SerializeField]
     private float dashingCooldown = 1f;
 
-    [SerializeField] private AudioClip audioClip;
-
     private Animator _playerAnimator;
     private PlayerHealth _playerHealth;
-    private AudioSource _audioSource;
 
 
     void Start()
     {
         _playerAnimator = GetComponent<Animator>();
         _playerHealth = GetComponent<PlayerHealth>();
-        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         PlayerMovementsUtility.GetInstance().ChangeOrientationOfPlayer(transform);
 
-        PlayerMovementsUtility.GetInstance().PerformIsAttacking(attackArea, timeToAttack);
+        PlayerMovementsUtility.GetInstance().PerformIsAttacking(timeToAttack);
         
-        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, _audioSource, audioClip, rb, groundCheck, groundLayer, _playerHealth);
+        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, rb, groundCheck, groundLayer, _playerHealth);
+    }
+    
+    // for attack
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     public void FixedUpdate()
@@ -86,7 +95,7 @@ public class PlayerScript2D : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        PlayerMovementsUtility.GetInstance().Attack(attackArea);
+        PlayerMovementsUtility.GetInstance().Attack(attackPoint, attackRange, enemyLayers, playerDamage);
     }
 
     public void Move(InputAction.CallbackContext context)
