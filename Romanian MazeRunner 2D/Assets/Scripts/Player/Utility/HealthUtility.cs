@@ -11,10 +11,10 @@ namespace DefaultNamespace
             PlayerHealth.health -= health;
         }
 
-        public void Hurt(float damageHealth)
+        public void Hurt(Animator animator, float damageHealth)
         {
             PlayerHealth.health -= damageHealth;
-            // isHurt = true;
+            animator.SetBool("IsHurt", true);
         }
 
         public void Die(Animator animator, Rigidbody2D rb)
