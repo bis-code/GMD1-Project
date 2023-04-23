@@ -7,18 +7,13 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public float damage;
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            HealthUtility.GetInstance().Hurt(damage);
+            Animator animator = other.gameObject.GetComponent<Animator>();
+            HealthUtility.GetInstance().Hurt(animator, damage);
         }
     }
 }

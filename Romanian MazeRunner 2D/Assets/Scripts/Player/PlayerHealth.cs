@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public static float health;
-    private bool isHurt = false;
     private Animator playerAnimator;
     private Rigidbody2D rb;
 

@@ -50,7 +50,7 @@
      <Compile Include="Assets\Ethan the Hero\Script\PlayerAttackMethod.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
-     <Compile Include="Assets\Scripts\Player\HealthUtility.cs" />
+     <Compile Include="Assets\Scripts\Player\Utility\HealthUtility.cs" />
      <Compile Include="Assets\Scripts\Player\HealthBarScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerScript2D.cs" />
@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\StartMenuScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\Utility\EnemyUtility.cs" />
      <Compile Include="Assets\Scripts\Enemy\Utility\model\EnemyDirection.cs" />
+     <Compile Include="Assets\Scripts\Player\Utility\PlayerUtility.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
@@ -307,6 +308,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm-help.zh-Hant.txt" />
      <Folder Include="Assets\Scripts\Enemy" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\license.txt" />
+     <Folder Include="Assets\Scripts\Player\Utility" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Fire" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />

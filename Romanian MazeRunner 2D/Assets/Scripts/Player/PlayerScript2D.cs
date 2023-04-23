@@ -1,23 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class PlayerScript2D : MonoBehaviour
 {
-    //TODO move to SerializedField
-    public Rigidbody2D rb;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-    public TrailRenderer tr;
-    public GameObject fallDetect;
-    public GameObject attackArea;
+    [SerializeField]
+    private Rigidbody2D rb;
+    [SerializeField]
+    private Transform groundCheck;
+    [SerializeField]
+    private LayerMask groundLayer;
+    [SerializeField]
+    private TrailRenderer tr;
+    [SerializeField]
+    private GameObject fallDetect;
+    [SerializeField]
+    private GameObject attackArea;
 
-    //dead
-   
-    
+
     //attack
     private bool isAttacking = false;
     private float timeToAttack = 0.25f;
@@ -37,12 +42,14 @@ public class PlayerScript2D : MonoBehaviour
     private Vector2 mousePosition;
     private Vector3 respawnPoint;
 
-    private Animator playerAnimator;
+    private Animator _playerAnimator;
+    private PlayerHealth _playerHealth;
 
 
     void Start()
     {
-        playerAnimator = GetComponent<Animator>();
+        _playerAnimator = GetComponent<Animator>();
+        _playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
@@ -67,9 +74,9 @@ public class PlayerScript2D : MonoBehaviour
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        playerAnimator.SetBool("OnGround", IsGrounded());
-        playerAnimator.SetBool("IsAttacking", isAttacking);
+        _playerAnimator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        _playerAnimator.SetBool("OnGround", IsGrounded());
+        _playerAnimator.SetBool("IsAttacking", isAttacking);
     }
 
     public void FixedUpdate()
@@ -99,15 +106,6 @@ public class PlayerScript2D : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Enemy"))
-        {
-            playerAnimator.SetTrigger("Hurt");
-        }
-            
     }
 
     public void Dash(InputAction.CallbackContext context)
