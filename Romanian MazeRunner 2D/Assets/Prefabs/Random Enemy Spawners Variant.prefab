@@ -31,37 +31,6 @@ Transform:
   m_Father: {fileID: 6550879660230959513}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &66823285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 66823286}
-  m_Layer: 0
-  m_Name: GameObject (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &66823286
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66823285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 241.8, y: -1.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6550879660230959513}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488704427
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8975614481340945468, guid: 6002805fcde566d4086b3c5119a28df7, type: 3}
       propertyPath: m_Name
-      value: Random Enemy Spawners
+      value: Random Enemy Spawners Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6002805fcde566d4086b3c5119a28df7, type: 3}
@@ -232,6 +201,9 @@ MonoBehaviour:
   - {fileID: 4232252084506682010}
   - {fileID: 7751383308267351027}
   - {fileID: 3394690377213247535}
+  - {fileID: 488704428}
+  - {fileID: 29722545}
+  - {fileID: 622002965}
   enemyPrefabs:
   - {fileID: 998043245440535032, guid: 32954df4c03264640805ac1bb6bf88b0, type: 3}
   - {fileID: 128027492765241953, guid: 81979f588a631e64abefc3b6e72dcbcd, type: 3}
