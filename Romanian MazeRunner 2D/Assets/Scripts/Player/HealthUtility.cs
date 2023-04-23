@@ -2,27 +2,36 @@
 
 namespace DefaultNamespace
 {
-    public class HealthUtility: IHealthUtility
+    public class HealthUtility
     {
-        private bool isHurt = false;
-        private Rigidbody2D rb;
-        private Animator animator;
-
+        private static HealthUtility instance;
+        
         public void Damage(float health)
         {
             PlayerHealth.health -= health;
-            Debug.Log(PlayerHealth.health);
         }
 
-        public void Hurt()
+        public void Hurt(float damageHealth)
         {
-            isHurt = true;
+            PlayerHealth.health -= damageHealth;
+            // isHurt = true;
         }
 
-        public void Die()
+        public void Die(Animator animator, Rigidbody2D rb)
         {
             animator.SetTrigger("Dead");
             rb.bodyType = RigidbodyType2D.Static;
+        }
+
+        public static HealthUtility getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new HealthUtility();
+                return instance;
+            }
+
+            return instance;
         }
     }
 }

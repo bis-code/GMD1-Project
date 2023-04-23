@@ -15,7 +15,5 @@ public class HealthBarScript : MonoBehaviour
     {
         localScale.x = PlayerHealth.health;
         transform.localScale = localScale;
-        
-        
     }
 }

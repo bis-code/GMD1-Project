@@ -8,15 +8,6 @@ public class EnemyDamage : MonoBehaviour
 {
     public float damage;
     
-    private PlayerHealth pHealth;
-    private IHealthUtility _healthUtility;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        pHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -27,8 +18,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerHealth.health -= damage;
-            _healthUtility.Hurt();
+            HealthUtility.getInstance().Hurt(damage);
         }
     }
 }

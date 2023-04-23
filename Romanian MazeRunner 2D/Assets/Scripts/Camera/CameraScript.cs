@@ -12,15 +12,9 @@ public class CameraScript : MonoBehaviour
     [SerializeField]
     private Transform target;
 
-    private ICameraUtility _cameraUtility;
-    void Start()
-    {
-        _cameraUtility = new CameraUtility(); 
-    }
-
     // Update is called once per frame
     void Update()
     {
-        _cameraUtility.moveCameraSmooth(target, transform, yOffset, FollowSpeed);
+        CameraUtility.getInstance().moveCameraSmooth(target, transform, yOffset, FollowSpeed);
     }
 }

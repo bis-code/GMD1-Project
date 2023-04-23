@@ -43,7 +43,6 @@
   <ItemGroup>
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovementData.cs" />
      <Compile Include="Assets\Scripts\Scene\SceneChangerScript.cs" />
-     <Compile Include="Assets\Scripts\Player\IHealthUtility.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerAnimation.cs" />
      <Compile Include="Assets\Ethan the Hero\Script\PlayerMovement\PlayerMovement.cs" />
@@ -57,8 +56,8 @@
      <Compile Include="Assets\Scripts\Player\PlayerScript2D.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerFallScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\RandomSpawnerScript.cs" />
-     <Compile Include="Assets\Scripts\Camera\ICameraUtility.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraUtility.cs" />
+     <Compile Include="Assets\Scripts\Player\ResettersAnimation.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
@@ -399,6 +398,7 @@
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationConfig.json" />
+     <Folder Include="Assets\Scripts\Utility" />
      <Folder Include="Assets\Environment\Sprites\Altar\Altar Packed" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
