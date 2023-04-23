@@ -6,16 +6,24 @@ namespace Enemy
 {
     public class EnemyHealth : MonoBehaviour
     {
-        public static float health;
+        [SerializeField]
+        private float maxHealth = 1f;
+        private float currentHealth;
 
         private void Start()
         {
-            health = 1;
+            currentHealth = maxHealth;
         }
-        
-        private void Update()
+
+        public void Update()
         {
-            if (health < 0)
+            
+        }
+
+        public void TakeDamage(float damage)
+        {
+            currentHealth -= damage;
+            if (currentHealth <= 0f)
             {
                 Destroy(gameObject);
             }

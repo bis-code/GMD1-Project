@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using DefaultNamespace.Model;
+using Enemy;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,10 +22,16 @@ namespace DefaultNamespace
 
         //performs actions
 
-        public void Attack(GameObject attackArea)
+        public void Attack(Transform attackPoint, float attackRange, LayerMask enemyLayers, float playerDamage)
         {
             IsAttacking = true;
-            attackArea.SetActive(IsAttacking);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+            Debug.Log(hitEnemies);
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                enemy.GetComponent<EnemyHealth>().TakeDamage(playerDamage);
+            }
         }
 
         public void Jump(InputAction.CallbackContext context, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, float jumpingPower)
@@ -89,7 +97,7 @@ namespace DefaultNamespace
             transform.localScale = localScale;
         }
 
-        public void PerformIsAttacking(GameObject attackArea, float timeToAttack)
+        public void PerformIsAttacking(float timeToAttack)
         {
             if(IsAttacking)
             {
@@ -97,21 +105,19 @@ namespace DefaultNamespace
             
                 if(Timer >= timeToAttack)
                 {
-                    ResetAttacking(attackArea);
+                    ResetAttacking();
                 }
             }
-
         }
-        
+
         //resetters animations
-        public void ResetAttacking(GameObject attackArea)
+        public void ResetAttacking()
         {
             Timer = 0;
             IsAttacking = false;
-            attackArea.SetActive(IsAttacking);
         }
 
-        public void PerformAnimations(Animator playerAnimator, AudioSource audioSource, AudioClip audioClip, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, PlayerHealth playerHealth)
+        public void PerformAnimations(Animator playerAnimator, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, PlayerHealth playerHealth)
         {
             playerAnimator.SetFloat(Animations.Speed.ToString(), Mathf.Abs(rb.velocity.x));
             playerAnimator.SetBool(Animations.OnGround.ToString(), 
@@ -121,7 +127,6 @@ namespace DefaultNamespace
             playerAnimator.SetBool(Animations.IsHurt.ToString(), playerHealth.isHurt);
             if (playerHealth.isDead)
             {
-                audioSource.clip = audioClip;
                 playerAnimator.SetTrigger(Animations.Dead.ToString());
             }
         }

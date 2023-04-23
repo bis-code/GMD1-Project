@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -958101126283286407}
   - component: {fileID: 6287025389914499192}
   - component: {fileID: 4797782651175434545}
-  - component: {fileID: 4658441551228507495}
-  m_Layer: 0
+  - component: {fileID: -6163775158139246311}
+  m_Layer: 7
   m_Name: Enemy_02
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.1
---- !u!114 &4658441551228507495
+--- !u!114 &-6163775158139246311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
