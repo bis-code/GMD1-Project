@@ -11,7 +11,7 @@ namespace DefaultNamespace
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                // EnemyHealth.health -= 1;
+                EnemyHealth.health -= 1;
             }
         }
     }

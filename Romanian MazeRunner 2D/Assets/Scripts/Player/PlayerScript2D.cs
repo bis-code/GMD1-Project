@@ -34,14 +34,18 @@ public class PlayerScript2D : MonoBehaviour
     [SerializeField]
     private float dashingCooldown = 1f;
 
+    [SerializeField] private AudioClip audioClip;
+
     private Animator _playerAnimator;
     private PlayerHealth _playerHealth;
+    private AudioSource _audioSource;
 
 
     void Start()
     {
         _playerAnimator = GetComponent<Animator>();
         _playerHealth = GetComponent<PlayerHealth>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -50,7 +54,7 @@ public class PlayerScript2D : MonoBehaviour
 
         PlayerMovementsUtility.GetInstance().PerformIsAttacking(attackArea, timeToAttack);
         
-        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, rb, groundCheck, groundLayer, _playerHealth);
+        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, _audioSource, audioClip, rb, groundCheck, groundLayer, _playerHealth);
     }
 
     public void FixedUpdate()
