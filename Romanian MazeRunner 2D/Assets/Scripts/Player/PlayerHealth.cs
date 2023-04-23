@@ -9,13 +9,15 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public static float health;
-    private Animator playerAnimator;
+    public bool isHurt = false;
+    public bool isDead = false;
+    private PlayerHealth _playerHealth;
     private Rigidbody2D rb;
 
     private void Start()
     {
         health = 1;
-        playerAnimator = GetComponent<Animator>();
+        _playerHealth = GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -23,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            HealthUtility.GetInstance().Die(playerAnimator, rb);
+            HealthUtility.GetInstance().Die(_playerHealth, rb);
         }
     }
 }

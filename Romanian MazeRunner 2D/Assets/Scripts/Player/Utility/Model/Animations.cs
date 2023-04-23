@@ -5,7 +5,8 @@
         Speed,
         OnGround,
         IsAttacking,
-        Hurt, 
-        Death
+        IsDashing,
+        IsHurt, 
+        Dead
     }
 }
