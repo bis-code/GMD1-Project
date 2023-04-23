@@ -73,9 +73,9 @@ public class PlayerScript2D : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (!PlayerMovementsUtility.GetInstance().CanDash) return;
-        StartCoroutine(
-            PlayerMovementsUtility.GetInstance().Dash(transform, rb, tr, dashingPower, 
-                dashingTime, dashingCooldown));
+        IEnumerator enumerator = PlayerMovementsUtility.GetInstance().Dash(transform, rb, tr, dashingPower,
+            dashingTime, dashingCooldown);
+        StartCoroutine(enumerator);
     }
 
     public void Attack(InputAction.CallbackContext context)

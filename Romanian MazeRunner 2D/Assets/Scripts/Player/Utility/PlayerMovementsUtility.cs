@@ -10,12 +10,12 @@ namespace DefaultNamespace
         private static PlayerMovementsUtility _instance;
 
         public bool IsAttacking { get; private set; }
-        public bool CanDash { get; private set; }
-        public bool IsDashing { get; private set; }
+        public bool IsDashing { get; set; }
         public float Timer { get; private set; }
         public float Horizontal { get; private set; }
         
         private bool _isFacingRight = true;
+        public bool CanDash = true;
         
 
         //performs actions
