@@ -86,7 +86,6 @@
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Dry_Ground_10" />
      <Folder Include="Assets\Environment\Sprites\Spirits" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III\Static" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Beach_Rocks_9" />
@@ -105,10 +104,8 @@
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.0\ValidationConfig.json" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III\Map Sprites" />
      <Folder Include="Assets\Character\Controllers" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
-     <Folder Include="Assets\Enemies\Constanta\Enemies" />
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
      <None Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\package.json" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
@@ -143,7 +140,6 @@
      <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Graphics" />
      <Folder Include="Assets\Enemies" />
-     <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_02\Animations" />
      <Folder Include="Assets\Scripts\Enemy\Utility" />
      <Folder Include="Assets\Environment\Sprites\Sky" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
@@ -155,7 +151,6 @@
      <Folder Include="Assets\Scripts\Camera" />
      <Folder Include="Assets\Ethan the Hero\Sprite\Ethan\WallSlide&amp;Jump" />
      <None Include="Library\PackageCache\com.unity.timeline@1.6.4\package.json" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III\Demo" />
      <Folder Include="Assets\Environment\Sprites\Crypt" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.en.txt" />
@@ -220,7 +215,6 @@
      <Folder Include="Assets\Environment\Sprite Shapes\Sprite Shape Profiles" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.17\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\workspaceserver.ko.txt" />
-     <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_01" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -264,12 +258,9 @@
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
      <Folder Include="Assets\Gothicvania Swamp Artwork" />
      <Folder Include="Assets\Environment\Sprites\Glyphs" />
-     <Folder Include="Assets\Enemies\Constanta" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\workspaceserver.es.txt" />
-     <Folder Include="Assets\Enemies\Constanta\Spawners" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III\Static\Side" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\crouch-shoot" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm-help.en.txt" />
@@ -358,7 +349,6 @@
      <Folder Include="Assets\Environment\Sprites\Altar" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.en.txt" />
      <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
-     <None Include="Assets\Aekashics Librarium - Megapack III\Terms of use.txt" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.1" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Enemies\Bucuresti\Enemies" />
@@ -388,7 +378,6 @@
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III\Static\Front" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.1\Tests" />
@@ -404,10 +393,8 @@
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Textures\BlueNoise16" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\ValidationConfig.json" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Beach_Sand_1" />
-     <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_01\Animations" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.ja.txt" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Dirty_Brick_Wall_6" />
-     <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_02" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
@@ -466,7 +453,6 @@
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Textures\BlueNoise16\L" />
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.6\package.json" />
-     <Folder Include="Assets\Aekashics Librarium - Megapack III" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
