@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 6991849013916550155, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - time: 0.033333335
-      value: {fileID: -276728812324164698, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
+      value: {fileID: 6991849013916550155, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - time: 0.06666667
       value: {fileID: 3156895337291164288, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - time: 0.1
@@ -57,7 +57,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 6991849013916550155, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
-    - {fileID: -276728812324164698, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
+    - {fileID: 6991849013916550155, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - {fileID: 3156895337291164288, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - {fileID: 1400002288684528572, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
     - {fileID: -1891625820773287384, guid: c6c6a03da3fbdac4a931eff49e9c2b98, type: 3}
@@ -91,7 +91,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.31666666
-    functionName: DeathSound
+    functionName: RestartLevel
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
