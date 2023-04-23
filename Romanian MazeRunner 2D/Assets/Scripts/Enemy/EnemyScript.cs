@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Enemy;
+using Enemy.model;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -25,13 +26,12 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
-        {
-            Vector3 direction = (target.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rb.rotation = angle;
-            moveDirection = direction;
-        }
+        EnemyDirection previousEnemyDirection = new EnemyDirection(moveDirection, rb.rotation);
+        EnemyDirection newEnemyDirection =
+            EnemyUtility.GetInstance().UpdateEnemyDirection(target, transform, previousEnemyDirection);
+            
+        rb.rotation = newEnemyDirection.rotation;
+        moveDirection = newEnemyDirection.moveDirection;
     }
 
     private void FixedUpdate()

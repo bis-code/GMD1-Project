@@ -27,8 +27,7 @@ public class RandomSpawnerScript : MonoBehaviour
     {
         int rangeEnemy = Random.Range(0, enemyPrefabs.Length);
         int rangeSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-
+        
         //todo this is not called
         if (playerTransform.position.x > spawnPoints[rangeSpawnPoint].position.x)
         {
