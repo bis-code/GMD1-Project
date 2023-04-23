@@ -5,11 +5,6 @@ namespace DefaultNamespace
     public class HealthUtility
     {
         private static HealthUtility instance;
-        
-        public void Damage(float health)
-        {
-            PlayerHealth.health -= health;
-        }
 
         public void Hurt(Animator animator, float damageHealth)
         {

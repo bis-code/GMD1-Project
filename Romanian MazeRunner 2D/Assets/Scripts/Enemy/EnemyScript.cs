@@ -9,9 +9,6 @@ using Vector2 = UnityEngine.Vector2;
 
 public class EnemyScript : MonoBehaviour
 {
-    public static event Action<EnemyScript> OnEnemyKilled;
-    [SerializeField] float health, maxHealth = 3f;
-
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -24,7 +21,6 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
-        health = maxHealth;
         target = GameObject.Find("Player").transform;
     }
 
@@ -43,19 +39,6 @@ public class EnemyScript : MonoBehaviour
         if (target)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
-        }
-    }
-
-    public void TakeDamage(float damageAmount)
-    {
-        Debug.Log($"Damage Amount: {damageAmount}");
-        health -= damageAmount;
-        Debug.Log($"Health is now: {health}");
-
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-            OnEnemyKilled?.Invoke(this);
         }
     }
 }
