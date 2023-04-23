@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            HealthUtility.getInstance().Die(playerAnimator, rb);
+            HealthUtility.GetInstance().Die(playerAnimator, rb);
         }
     }
 }

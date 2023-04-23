@@ -15,6 +15,6 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraUtility.getInstance().moveCameraSmooth(target, transform, yOffset, FollowSpeed);
+        CameraUtility.GetInstance().moveCameraSmooth(target, transform, yOffset, FollowSpeed);
     }
 }

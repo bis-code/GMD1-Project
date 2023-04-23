@@ -58,6 +58,10 @@
      <Compile Include="Assets\Scripts\Enemy\RandomSpawnerScript.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraUtility.cs" />
      <Compile Include="Assets\Scripts\Player\ResettersAnimation.cs" />
+     <Compile Include="Assets\Scripts\EndMenuScript.cs" />
+     <Compile Include="Assets\Scripts\StartMenuScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Utility\EnemyUtility.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Utility\model\EnemyDirection.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
@@ -68,6 +72,7 @@
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.zh-Hant.txt" />
      <Folder Include="Assets\Ethan the Hero\Animation" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\Ethan the Hero\Script\PlayerMovement" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.31" />
@@ -80,9 +85,11 @@
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Beach_Rocks_9" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\shoot" />
      <Folder Include="Library\PackageCache\com.unity.modules.imgui@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.zh-Hant.txt" />
+     <Folder Include="Assets\TextMesh Pro\Sprites" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\idle" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.es.txt" />
@@ -100,6 +107,7 @@
      <Folder Include="Assets\Enemies\Constanta\Enemies" />
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
      <None Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\package.json" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.es.txt" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rocky_Sand_1" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
@@ -125,12 +133,14 @@
      <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.0\Tests" />
      <Folder Include="Assets\Settings" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.ja.txt" />
      <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Graphics" />
      <Folder Include="Assets\Enemies" />
      <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_02\Animations" />
+     <Folder Include="Assets\Scripts\Enemy\Utility" />
      <Folder Include="Assets\Environment\Sprites\Sky" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.ja.txt" />
@@ -151,6 +161,7 @@
      <Folder Include="Assets\Environment\Sprites" />
      <Folder Include="Assets\ImagesForBackground" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Ghost" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Scenes" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0" />
@@ -159,6 +170,7 @@
      <Folder Include="Assets\PixelPack03_Free" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\basecommands.zh-Hant.txt" />
      <Folder Include="Assets\Ethan the Hero\Prefabs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm-help.es.txt" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
@@ -168,6 +180,8 @@
      <Folder Include="Library\PackageCache\com.unity.2d.animation@7.0.9\Tests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.zh-Hant.txt" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Ice_15" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Flaked_Paint_Wall_7" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\basecommands.ja.txt" />
@@ -205,6 +219,7 @@
      <Folder Include="Assets\Enemies\Constanta\Enemies\Enemy_01" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.feature.2d@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
@@ -222,6 +237,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.en.txt" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Forest_Ground_12" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.es.txt" />
+     <Folder Include="Assets\TextMesh Pro" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.zh-Hant.txt" />
      <Folder Include="Assets\Scripts\Player" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
@@ -265,6 +281,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.10" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\binmergetool.en.txt" />
@@ -273,7 +290,9 @@
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\crouch" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets\Ethan the Hero\Sprite\Ethan\Attack" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.zh-Hant.txt" />
      <None Include="Assets\Game Buffs\Free Realistic Textures\README.txt" />
@@ -281,6 +300,7 @@
      <None Include="Library\PackageCache\com.unity.2d.common@6.0.6\package.json" />
      <Folder Include="Assets\Environment\Materials\Temple" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\semantic.ko.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Ethan the Hero\Sprite\Ethan" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\workspaceserver.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.17\ValidationExceptions.json" />
@@ -289,9 +309,11 @@
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\license.txt" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Fire" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.zh-Hant.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <Folder Include="Assets\Environment\Tilemaps" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
      <Folder Include="Assets\Environment\Textures" />
@@ -304,6 +326,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Ethan the Hero\Graphic" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Demo" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\Textures" />
@@ -316,9 +339,11 @@
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4\package.json" />
      <Folder Include="Assets\Environment\Materials\Spirit" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\fall" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Gizmos" />
      <Folder Include="Assets\Enemies\Bucuresti\Enemies\Enemy_01" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.0\ValidationExceptions.json" />
+     <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm-help.ko.txt" />
@@ -339,9 +364,11 @@
      <Folder Include="Assets\Ethan the Hero\PhisicMaterial" />
      <Folder Include="Assets\Enemies\Bucuresti\Enemies\Enemy_02" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\i3.es.txt" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.ko.txt" />
+     <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Shingle_Roof_12" />
@@ -353,6 +380,7 @@
      <None Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.18" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.10" />
      <Folder Include="Assets\Aekashics Librarium - Megapack III\Static\Front" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
@@ -389,6 +417,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.zh-Hans.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\semantic.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Polished_Marble_34" />
@@ -415,6 +444,7 @@
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Enemy-Death" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
      <Folder Include="Assets\Ethan the Hero\Graphic\Urp" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Assets\Game Buffs\Free Realistic Textures\Textures\Rusty_Metal_11" />
@@ -422,6 +452,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.ko.txt" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Thing" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\stand" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\jump" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Editor" />
@@ -431,12 +462,14 @@
      <Folder Include="Assets\Aekashics Librarium - Megapack III" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\Environment\Sprite Shapes\Sprites" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4\Tests" />
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
      <Folder Include="Assets\Environment\Sprite Shapes" />
+     <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Spider" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player" />
      <None Include="Library\PackageCache\com.unity.2d.animation@7.0.9\package.json" />
@@ -448,6 +481,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.ko.txt" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\i3.ja.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.Unsafe.xml" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization" />
      <Folder Include="Assets\Gothicvania Swamp Artwork\Sprites\Player\hurt" />
@@ -458,6 +492,7 @@
      <Folder Include="Assets\Environment\Materials\Sky" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.10\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
+     <Folder Include="Assets\Scripts\Enemy\Utility\model" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.ja.txt" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.2\package.json" />
@@ -467,12 +502,14 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets\Noise" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets" />
      <Folder Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.6" />
      <Folder Include="Assets\Enemies\Bucuresti" />
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.6\Tests" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\semantic.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\i3.ko.txt" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@6.0.7\Tests" />

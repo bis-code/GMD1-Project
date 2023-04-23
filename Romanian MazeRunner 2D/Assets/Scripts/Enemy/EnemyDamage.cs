@@ -18,7 +18,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            HealthUtility.getInstance().Hurt(damage);
+            HealthUtility.GetInstance().Hurt(damage);
         }
     }
 }
