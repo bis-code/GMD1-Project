@@ -23,10 +23,7 @@ namespace Sounds
 
         void AttackSound()
         {
-            float currentVolume = audioSource.volume;
-            audioSource.volume = 0.2f;   
             audioSource.PlayOneShot(attackSound);
-            audioSource.volume = currentVolume;
         }
     }
 }
