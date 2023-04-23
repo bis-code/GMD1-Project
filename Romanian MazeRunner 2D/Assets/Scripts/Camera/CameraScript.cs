@@ -5,27 +5,22 @@ using UnityEngine.InputSystem;
 
 public class CameraScript : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public float yOffset = 1f;
-    public Transform target;
+    [SerializeField]
+    private float FollowSpeed = 2f;
+    [SerializeField]
+    private float yOffset = 1f;
+    [SerializeField]
+    private Transform target;
 
-    // Start is called before the first frame update
+    private ICameraUtility _cameraUtility;
     void Start()
     {
-        
+        _cameraUtility = new CameraUtility(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target != null)
-        {
-            Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
-            transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
-        }
-        // if (player.transform.localScale.x > 0f)
-        // {
-        //     playerPosition = new Vector3(playerPosition.x + offset, playerPosition.y, playerPosition.z);
-        // }
+        _cameraUtility.moveCameraSmooth(target, transform, yOffset, FollowSpeed);
     }
 }

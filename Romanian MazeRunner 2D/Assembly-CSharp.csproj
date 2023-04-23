@@ -57,6 +57,8 @@
      <Compile Include="Assets\Scripts\Player\PlayerScript2D.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerFallScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\RandomSpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\Camera\ICameraUtility.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraUtility.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
