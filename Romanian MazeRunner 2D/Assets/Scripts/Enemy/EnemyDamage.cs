@@ -12,8 +12,8 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Animator animator = other.gameObject.GetComponent<Animator>();
-            HealthUtility.GetInstance().Hurt(animator, damage);
+            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+            HealthUtility.GetInstance().Hurt(playerHealth, damage);
         }
     }
 }
