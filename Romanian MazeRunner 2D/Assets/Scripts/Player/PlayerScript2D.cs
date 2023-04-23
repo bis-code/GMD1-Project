@@ -33,13 +33,15 @@ public class PlayerScript2D : MonoBehaviour
     private float dashingTime = 0.2f;
     [SerializeField]
     private float dashingCooldown = 1f;
-    
+
     private Animator _playerAnimator;
+    private PlayerHealth _playerHealth;
 
 
     void Start()
     {
         _playerAnimator = GetComponent<Animator>();
+        _playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
@@ -48,7 +50,7 @@ public class PlayerScript2D : MonoBehaviour
 
         PlayerMovementsUtility.GetInstance().PerformIsAttacking(attackArea, timeToAttack);
         
-        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, rb, groundCheck, groundLayer);
+        PlayerMovementsUtility.GetInstance().PerformAnimations(_playerAnimator, rb, groundCheck, groundLayer, _playerHealth);
     }
 
     public void FixedUpdate()
@@ -73,9 +75,9 @@ public class PlayerScript2D : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (!PlayerMovementsUtility.GetInstance().CanDash) return;
-        StartCoroutine(
-            PlayerMovementsUtility.GetInstance().Dash(transform, rb, tr, dashingPower, 
-                dashingTime, dashingCooldown));
+        IEnumerator enumerator = PlayerMovementsUtility.GetInstance().Dash(transform, rb, tr, dashingPower,
+            dashingTime, dashingCooldown);
+        StartCoroutine(enumerator);
     }
 
     public void Attack(InputAction.CallbackContext context)

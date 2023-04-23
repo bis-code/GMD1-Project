@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -6,15 +7,15 @@ namespace DefaultNamespace
     {
         private static HealthUtility instance;
 
-        public void Hurt(Animator animator, float damageHealth)
+        public void Hurt(PlayerHealth playerHealth, float damageHealth)
         {
             PlayerHealth.health -= damageHealth;
-            animator.SetBool("IsHurt", true);
+            playerHealth.isHurt = true;
         }
 
-        public void Die(Animator animator, Rigidbody2D rb)
+        public void Die(PlayerHealth playerHealth, Rigidbody2D rb)
         {
-            animator.SetTrigger("Dead");
+            playerHealth.isDead = true;
             rb.bodyType = RigidbodyType2D.Static;
         }
 

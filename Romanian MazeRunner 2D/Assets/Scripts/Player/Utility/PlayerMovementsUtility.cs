@@ -10,12 +10,12 @@ namespace DefaultNamespace
         private static PlayerMovementsUtility _instance;
 
         public bool IsAttacking { get; private set; }
-        public bool CanDash { get; private set; }
-        public bool IsDashing { get; private set; }
+        public bool IsDashing { get; set; }
         public float Timer { get; private set; }
         public float Horizontal { get; private set; }
         
         private bool _isFacingRight = true;
+        public bool CanDash = true;
         
 
         //performs actions
@@ -30,14 +30,15 @@ namespace DefaultNamespace
         {
             if (IsDashing) return;
 
+            var velocity = rb.velocity;
             if (context.performed && IsGrounded(groundCheck, groundLayer))
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                rb.velocity = new Vector2(velocity.x, jumpingPower);
             }
 
             if (context.canceled && rb.velocity.y > 0f)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+                rb.velocity = new Vector2(velocity.x, velocity.y * 0.5f);
             }
         }
 
@@ -53,7 +54,7 @@ namespace DefaultNamespace
             CanDash = true;
             tr.emitting = false;
         }
-        
+
         public void Move(InputAction.CallbackContext context)
         {
             if (IsDashing) return;
@@ -61,11 +62,7 @@ namespace DefaultNamespace
         }
         
         //verifiers
-        public bool CanJump(InputAction.CallbackContext context, Transform groundCheck, LayerMask groundLayer)
-        {
-            return context.performed && IsGrounded(groundCheck, groundLayer);
-        }
-        
+
         public bool IsGrounded(Transform groundCheck, LayerMask groundLayer)
         {
             return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -114,12 +111,18 @@ namespace DefaultNamespace
             attackArea.SetActive(IsAttacking);
         }
 
-        public void PerformAnimations(Animator playerAnimator, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer)
+        public void PerformAnimations(Animator playerAnimator, Rigidbody2D rb, Transform groundCheck, LayerMask groundLayer, PlayerHealth playerHealth)
         {
             playerAnimator.SetFloat(Animations.Speed.ToString(), Mathf.Abs(rb.velocity.x));
             playerAnimator.SetBool(Animations.OnGround.ToString(), 
                 PlayerMovementsUtility.GetInstance().IsGrounded(groundCheck, groundLayer));
             playerAnimator.SetBool(Animations.IsAttacking.ToString(), IsAttacking);
+            playerAnimator.SetBool(Animations.IsDashing.ToString(), IsDashing);
+            playerAnimator.SetBool(Animations.IsHurt.ToString(), playerHealth.isHurt);
+            if (playerHealth.isDead)
+            {
+                playerAnimator.SetTrigger(Animations.Dead.ToString());
+            }
         }
         
         //singleton
