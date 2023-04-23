@@ -16,13 +16,6 @@ public class RandomSpawnerScript : MonoBehaviour
         InvokeRepeating("spawnEnemy", 1f, enemyInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-   
     private void spawnEnemy()
     {
         int rangeEnemy = Random.Range(0, enemyPrefabs.Length);
@@ -35,7 +28,7 @@ public class RandomSpawnerScript : MonoBehaviour
             Debug.Log("enemy x" + spawnPoints[rangeSpawnPoint].position.x);
             return;
         }
-            
+
         GameObject enemy = Instantiate(enemyPrefabs[rangeEnemy], spawnPoints[rangeSpawnPoint].position, transform.rotation);
     }
 }
