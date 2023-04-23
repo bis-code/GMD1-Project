@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204798316545109059, guid: de473142518d31943b93ba430e86b65c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.84
+      value: 91.62
       objectReference: {fileID: 0}
     - target: {fileID: 9204798316545109059, guid: de473142518d31943b93ba430e86b65c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10859,7 +10859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204798316545109059, guid: de473142518d31943b93ba430e86b65c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 204.89
+      value: 206.08
       objectReference: {fileID: 0}
     - target: {fileID: 9204798316545109059, guid: de473142518d31943b93ba430e86b65c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10908,6 +10908,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 148950579470637360, guid: 6002805fcde566d4086b3c5119a28df7, type: 3}
   m_PrefabInstance: {fileID: 4943460663802326401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866122232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 999604480493566564, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}
+  m_PrefabInstance: {fileID: 5811456050224872417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866122243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866122232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914c6f830e934d7e8651e373aca282fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2014177612
 GameObject:
   m_ObjectHideFlags: 0
@@ -11146,6 +11163,10 @@ PrefabInstance:
     - target: {fileID: 6398038910869587728, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}
       propertyPath: healthBar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845233969902109433, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 215f4ff8672173045bfe8128c4e55087, type: 3}

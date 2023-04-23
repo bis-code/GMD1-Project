@@ -60,6 +60,8 @@
      <Compile Include="Assets\Scripts\Menu\EndMenuScript.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraUtility.cs" />
      <Compile Include="Assets\Scripts\Player\ResettersAnimation.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
      <Folder Include="Assets\Scenes" />
