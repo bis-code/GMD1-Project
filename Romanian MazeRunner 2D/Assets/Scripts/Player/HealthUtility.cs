@@ -23,12 +23,11 @@ namespace DefaultNamespace
             rb.bodyType = RigidbodyType2D.Static;
         }
 
-        public static HealthUtility getInstance()
+        public static HealthUtility GetInstance()
         {
             if (instance == null)
             {
                 instance = new HealthUtility();
-                return instance;
             }
 
             return instance;

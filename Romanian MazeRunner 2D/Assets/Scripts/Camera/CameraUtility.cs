@@ -12,12 +12,11 @@ public class CameraUtility
         }
     }
 
-    public static CameraUtility getInstance()
+    public static CameraUtility GetInstance()
     {
         if (instance == null)
         {
             instance = new CameraUtility();
-            return instance;
         }
 
         return instance;
