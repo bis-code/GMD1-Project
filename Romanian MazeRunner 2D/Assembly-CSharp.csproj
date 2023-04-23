@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\StartMenuScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\Utility\EnemyUtility.cs" />
      <Compile Include="Assets\Scripts\Enemy\Utility\model\EnemyDirection.cs" />
-     <Compile Include="Assets\Scripts\Player\Utility\PlayerUtility.cs" />
+     <Compile Include="Assets\Scripts\Player\Utility\PlayerMovementsUtility.cs" />
+     <Compile Include="Assets\Scripts\Player\Utility\model.cs" />
+     <Compile Include="Assets\Scripts\Player\Utility\Model\Animations.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
@@ -431,6 +433,7 @@
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationConfig.json" />
      <Folder Include="Assets\Scripts\Utility" />
      <Folder Include="Assets\Environment\Sprites\Altar\Altar Packed" />
+     <Folder Include="Assets\Scripts\Player\Utility\Model" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
