@@ -15,7 +15,7 @@ namespace Enemy
                 Vector3 direction = (target.position - enemyTransform.position).normalized;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 
-                enemyDirection.rotation = angle;
+               // enemyDirection.rotation = angle;
                 enemyDirection.moveDirection = direction;
             }
             return enemyDirection;

@@ -95,7 +95,10 @@ public class PlayerScript2D : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        PlayerMovementsUtility.GetInstance().Attack(attackPoint, attackRange, enemyLayers, playerDamage);
+        if (context.action.triggered)
+        {
+            PlayerMovementsUtility.GetInstance().Attack(attackPoint, attackRange, enemyLayers, playerDamage);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)

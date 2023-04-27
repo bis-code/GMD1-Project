@@ -23,6 +23,7 @@ namespace Enemy
         public void TakeDamage(float damage)
         {
             currentHealth -= damage;
+            Debug.Log("currentHealth " + currentHealth);
             if (currentHealth <= 0f)
             {
                 Destroy(gameObject);

@@ -30,6 +30,7 @@ namespace DefaultNamespace
             Debug.Log(hitEnemies);
             foreach (Collider2D enemy in hitEnemies)
             {
+                Debug.Log(enemy.transform);
                 enemy.GetComponent<EnemyHealth>().TakeDamage(playerDamage);
             }
         }

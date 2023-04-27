@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 public class RandomSpawnerScript : MonoBehaviour
 {
@@ -16,13 +19,18 @@ public class RandomSpawnerScript : MonoBehaviour
         InvokeRepeating("spawnEnemy", 1f, enemyInterval);
     }
 
+    private bool checkWithinRange(Transform t1, Transform t2, float distance)
+    {
+        return Vector2.Distance(t1.position, t2.position) < distance;
+    }
+    
     private void spawnEnemy()
     {
         int rangeEnemy = Random.Range(0, enemyPrefabs.Length);
         int rangeSpawnPoint = Random.Range(0, spawnPoints.Length);
         
         //todo this is not called
-        if (playerTransform.position.x > spawnPoints[rangeSpawnPoint].position.x)
+        if (playerTransform.position.x > spawnPoints[rangeSpawnPoint].position.x && !checkWithinRange(playerTransform,spawnPoints[rangeSpawnPoint],3))
         {
             Debug.Log("player x" + playerTransform.position.x);
             Debug.Log("enemy x" + spawnPoints[rangeSpawnPoint].position.x);
