@@ -1,72 +1,55 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+namespace Menu
 {
-
-    public Scene currentScene;
-    [SerializeField] private GameObject pauseMenu;
-
-    public void Pause()
+    public class PauseMenu : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        public GameObject pauseCanvas;
+
+       public void LoadConstanta()
         {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0f;
+            SceneManager.LoadScene("Constanta");
         }
-    }
-    private void Awake()
-    {
-        currentScene = SceneManager.GetActiveScene();
-    }
+    
+        public void LoadBucuresti()
+        {
+            SceneManager.LoadScene("Bucuresti");
+        }
+    
+        public void LoadBrasov()
+        {
+            SceneManager.LoadScene("Brasov");
+        }
+    
+        public void LoadPloiesti()
+        {
+            SceneManager.LoadScene("Ploiesti");
+        }
+    
+        public void LoadCluj()
+        {
+            SceneManager.LoadScene("Cluj");
+        }
+    
+        public void LoadIasi()
+        {
+            SceneManager.LoadScene("Iasi");
+        }
 
-    public void LoadConstanta()
-    {
-        SceneManager.LoadScene("Constanta");
-    }
-    
-    public void LoadBucuresti()
-    {
-        SceneManager.LoadScene("Bucuresti");
-    }
-    
-    public void LoadBrasov()
-    {
-        SceneManager.LoadScene("Brasov");
-    }
-    
-    public void LoadPloiesti()
-    {
-        SceneManager.LoadScene("Ploiesti");
-    }
-    
-    public void LoadCluj()
-    {
-        SceneManager.LoadScene("Cluj");
-    }
-    
-    public void LoadIasi()
-    {
-        SceneManager.LoadScene("Iasi");
-    }
+        public void QuitMenu()
+        {
+            pauseCanvas.gameObject.SetActive(false);
+        }
 
-    public void RestartCurrentLevel()
-    {
-        SceneManager.LoadScene(currentScene.ToString());
-    }
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
 
-    public void QuitMenu()
-    {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        public void RestartLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
