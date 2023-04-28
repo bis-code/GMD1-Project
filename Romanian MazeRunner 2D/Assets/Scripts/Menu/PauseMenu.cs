@@ -5,26 +5,9 @@ namespace Menu
 {
     public class PauseMenu : MonoBehaviour
     {
-
         public GameObject pauseCanvas;
-        private bool isPaused = false;
 
-
-        private void Start()
-        {
-            pauseCanvas.gameObject.SetActive(false);
-        }
-
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                pauseCanvas.gameObject.SetActive(true);
-            }
-        }
-
-        public void LoadConstanta()
+       public void LoadConstanta()
         {
             SceneManager.LoadScene("Constanta");
         }
@@ -62,6 +45,11 @@ namespace Menu
         public void QuitGame()
         {
             Application.Quit();
+        }
+
+        public void RestartLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

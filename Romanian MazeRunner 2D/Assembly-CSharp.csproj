@@ -60,13 +60,14 @@
      <Compile Include="Assets\Scripts\Player\HealthBarScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
      <Compile Include="Assets\Sounds\SoundScript.cs" />
+     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerScript2D.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerFallScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\RandomSpawnerScript.cs" />
      <Compile Include="Assets\Scripts\Player\ResettersAnimation.cs" />
      <Compile Include="Assets\Scripts\Menu\StartMenuScript.cs" />
      <Compile Include="Assets\Scripts\Player\Utility\Model\Animations.cs" />
-     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\PauseMenuManagerScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Ethan the Hero\Sprite" />
      <Folder Include="Assets\Scenes" />
