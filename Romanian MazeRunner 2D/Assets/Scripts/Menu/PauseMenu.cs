@@ -2,13 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
 
     public Scene currentScene;
+    [SerializeField] private GameObject pauseMenu;
 
+    public void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
     private void Awake()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -51,7 +61,8 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitMenu()
     {
-        
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()
