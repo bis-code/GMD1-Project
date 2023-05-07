@@ -1,24 +1,15 @@
 ﻿
 # GMD1 Project (Romanian MazeRunner 2D) made by Adrian-Gabriel Vaitis and Ioan-Sorin Baicoianu
 > ### Requirements GMD1 Project
->   1.  As an user, I want to be able to resume my current gameplay even after I exited the game.
->   2. As an user, I want to be able to reset my password.
->   3. As an user, I want to be able to get notified when somebody attacks me.
->   4. As an user, I want to be able to see what achievements I have not completed.
->   5. As an user, I want to get prizes for completing an achievement.
->   6. As an user, I want to able to have checkpoints.
->   7. As an user, I want to be able to respawn to the last checkpoint saved.
->   8. As an user, I want to have multiple levels.
->   9. As an user, I want to get XP after killing an enemy.
->   10. As an user, I want to get XP if I complete a level without getting damage/respawned.
->   11. As an user, I want to get killed/respawned if I fall out of the map.
->   12. As an user, I want to see my health and xp bar.
->   13. As an user, after completing a level, I want to have my record displayed in a billboard. (record = total xp earned)
->   14. As an user, I want to have a weapon in my hand in order to kill the enemies.
->   15. As an user, I want to be able to hit the enemy and kill them.
->   16. As an user, I want to be able to move/jump/crouch throughout obstacles.
->   17. As an user, I want to be able to register/login with an account before playing the game.
->   18. As an user, I want to be able to have enemies with whom I can fight.
+>   1. As an user, I want to able to have checkpoints.
+>   2. As an user, I want to be able to respawn to the last checkpoint saved.
+>   3. As an user, I want to have multiple levels.
+>   4. As an user, I want to get killed/respawned if I fall out of the map.
+>   5. As an user, I want to see my health.
+>   6. As an user, I want to have a weapon in my hand in order to kill the enemies.
+>   7. As an user, I want to be able to hit the enemy and kill them.
+>   8. As an user, I want to be able to move/jump/crouch throughout obstacles.
+>   9. As an user, I want to be able to have enemies with whom I can fight.
 
 
 ### Reflections - notes
@@ -30,3 +21,7 @@
 > [2D PixelArt - Isometric Blocks](https://assetstore.unity.com/packages/3d/environments/2d-pixelart-isometric-blocks-115039)
 > [Aekashics Librarium - Megapack III](https://assetstore.unity.com/packages/2d/characters/aekashics-librarium-megapack-iii-130410)
 > [Gothicvania Swamp Artwork](https://assetstore.unity.com/packages/2d/characters/gothicvania-swamp-152865)
+
+### Tutorials watched
+> [Checkpoints](https://www.youtube.com/watch?v=VGOVe_adFMc)
+> [Healthbar](https://www.youtube.com/watch?v=STrjeoyM2q0)
