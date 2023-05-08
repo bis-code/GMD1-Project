@@ -35,4 +35,6 @@
 
 ### Video presentation
 
-> [Demo](https://youtu.be/ayRx0B1JOIA)
+> [WebGL Demo](https://romanian-maze-runner.github.io/GMD1-Project/RomanianMazeRunnerWebGL/)
+
+> [Youtube Video](https://youtu.be/ayRx0B1JOIA)
