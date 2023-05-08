@@ -15,6 +15,7 @@
 
 ### Used packages
 > [20+ Free Realistic Textures - Nature, City, Home, Construction & More](https://assetstore.unity.com/packages/2d/textures-materials/20-free-realistic-textures-nature-city-home-construction-more-240323)
+>
 > [Ethan the Hero](https://assetstore.unity.com/packages/2d/characters/ethan-the-hero-237992)
 >
 > [TextMesh Pro](https://assetstore.unity.com/packages/tools/gui/textmesh-pro-effect-156234)
@@ -26,6 +27,10 @@
 ### Tutorials watched
 > [Checkpoints](https://www.youtube.com/watch?v=VGOVe_adFMc)
 > 
+> [Animations 2D](https://www.youtube.com/watch?v=hkaysu1Z-N8)
+>
+> [Melee Attack](https://youtu.be/sPiVz1k-fEs)
+>
 > [Healthbar](https://www.youtube.com/watch?v=STrjeoyM2q0)
 
 ### Video presentation
